@@ -23,12 +23,6 @@
 <script>
     let tg = window.Telegram.WebApp;
     tg.expand();
-    tg.MainButton.enable();
-    tg.MainButton.text = "Сохранить прогресс";
-    tg.MainButton.setText("Сохранить прогресс");
-    tg.MainButton.textColor = "#F55353";
-    tg.MainButton.color = "#143F6B";
-    tg.MainButton.setParams({"color": "#143F6B"});
 
     const currentUrl = window.location.href;
     const url = new URL(currentUrl);
@@ -47,7 +41,7 @@
         t.innerHTML = count + "";
     }
     function SendData(){
-	tg.sendData(count);
+	tg.sendData("" + count + "");
 	alert("Данные сохранены!");
     }
 </script>
