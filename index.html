@@ -16,13 +16,14 @@
             </button>
         </div>
         <p style="font-size: 15px;">Накопи <u><b>1.000.000 морковок</b></u> и получи <u><b>подарок</b></u> в <u><b>Telegram боте!</b></u></p>
+	<button onclick="SendData();" class="btn2">Сохранить прогресс!</button>
     </div>
 </body>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
     let tg = window.Telegram.WebApp;
     tg.expand();
-    tg.MainButton.enable()
+    tg.MainButton.enable();
     tg.MainButton.text = "Сохранить прогресс";
     tg.MainButton.setText("Сохранить прогресс");
     tg.MainButton.textColor = "#F55353";
@@ -45,8 +46,8 @@
         count ++;
         t.innerHTML = count + "";
     }
-    Telegram.WebApp.onEvent('mainButtonClicked', function(){
-	    tg.sendData(count);
+    function SendData(){
+	tg.sendData(count);
     });
 </script>
 </html>
