@@ -14,9 +14,13 @@ body{
 }
 .btn2{
     width: 80vw;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 0px;
     background: #2BBD55;
+    color: white;
+    height: 10vw;
+    font-family: 'Font1';
+    font-size: 5vw;
 }
 .morkov{
     width: 50vw;
